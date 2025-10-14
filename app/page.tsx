@@ -11,6 +11,7 @@ interface MCPServer {
   capabilities: string[]
   url: string
   status: 'live' | 'deploying' | 'offline'
+  githubRepo: string
 }
 
 const mcpServers: MCPServer[] = [
@@ -21,7 +22,8 @@ const mcpServers: MCPServer[] = [
     icon: '/hackerNews.png',
     capabilities: ['get_top_stories', 'get_story', 'get_new_stories'],
     url: 'https://hackernews-mcp.onrender.com/',
-    status: 'live'
+    status: 'live',
+    githubRepo: 'https://github.com/akarnik23/hackernews-mcp'
   },
   {
     id: 'weather',
@@ -30,7 +32,8 @@ const mcpServers: MCPServer[] = [
     icon: '/weather.png',
     capabilities: ['get_current_weather', 'get_forecast'],
     url: 'https://weather-mcp-mqrh.onrender.com',
-    status: 'live'
+    status: 'live',
+    githubRepo: 'https://github.com/akarnik23/weather-mcp'
   },
   {
     id: 'github',
@@ -39,7 +42,8 @@ const mcpServers: MCPServer[] = [
     icon: '/github.png',
     capabilities: ['get_repos', 'get_issues', 'get_pull_requests', 'search_code'],
     url: 'https://github-mcp-lgfb.onrender.com/',
-    status: 'live'
+    status: 'live',
+    githubRepo: 'https://github.com/akarnik23/github-mcp'
   }
 ]
 
@@ -197,13 +201,29 @@ export default function Home() {
                   {/* Primary CTA: Add to Poke */}
                   <button
                     onClick={() => addToPoke(server.url)}
-                    className="w-full flex items-center justify-center gap-2 px-4 py-3 rounded-lg font-semibold active:scale-95 transition-all"
+                    className="w-full flex items-center justify-center gap-2 px-4 py-3 rounded-lg font-semibold active:scale-95 transition-all mb-3"
                     style={{ background: '#ffffff', color: '#203a54' }}
                     aria-label="Add this MCP integration to Poke"
                   >
                     <ExternalLink className="w-5 h-5" />
                     Add to Poke
                   </button>
+
+                  {/* Deploy to Render */}
+                  <a
+                    href={`https://render.com/deploy?repo=${server.githubRepo}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-full flex items-center justify-center gap-2 px-4 py-2 rounded-lg font-medium text-sm border transition-all hover:opacity-90"
+                    style={{ 
+                      background: 'transparent', 
+                      color: '#718392', 
+                      borderColor: '#718392' 
+                    }}
+                  >
+                    <Zap className="w-4 h-4" />
+                    Deploy to Render
+                  </a>
                 </div>
               </div>
             ))}
