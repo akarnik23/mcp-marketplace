@@ -23,7 +23,7 @@ const mcpServers: MCPServer[] = [
     capabilities: ['get_top_stories', 'get_story', 'get_new_stories'],
     url: 'https://hackernews-mcp.onrender.com/',
     status: 'live',
-    githubRepo: 'https://github.com/akarnik23/hackernews-mcp'
+    githubRepo: 'https://github.com/akarnik23/mcp-hackernews'
   },
   {
     id: 'weather',
@@ -33,7 +33,7 @@ const mcpServers: MCPServer[] = [
     capabilities: ['get_current_weather', 'get_forecast'],
     url: 'https://weather-mcp-mqrh.onrender.com',
     status: 'live',
-    githubRepo: 'https://github.com/akarnik23/weather-mcp'
+    githubRepo: 'https://github.com/akarnik23/mcp-weather'
   },
   {
     id: 'github',
@@ -43,7 +43,7 @@ const mcpServers: MCPServer[] = [
     capabilities: ['get_repos', 'get_issues', 'get_pull_requests', 'search_code'],
     url: 'https://github-mcp-lgfb.onrender.com/',
     status: 'live',
-    githubRepo: 'https://github.com/akarnik23/github-mcp'
+    githubRepo: 'https://github.com/akarnik23/mcp-github'
   }
 ]
 
