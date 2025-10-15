@@ -44,6 +44,16 @@ const mcpServers: MCPServer[] = [
     url: 'https://github-mcp-lgfb.onrender.com/',
     status: 'live',
     githubRepo: 'https://github.com/akarnik23/mcp-github'
+  },
+  {
+    id: 'reddit',
+    name: 'Reddit',
+    description: 'Access Reddit posts, search, and user content from any subreddit',
+    icon: '/reddit.png',
+    capabilities: ['get_subreddit_posts', 'search_reddit', 'get_user_posts'],
+    url: 'https://reddit-mcp-7ms2.onrender.com/',
+    status: 'live',
+    githubRepo: 'https://github.com/akarnik23/mcp-reddit'
   }
 ]
 
