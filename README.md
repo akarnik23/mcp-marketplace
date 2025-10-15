@@ -1,4 +1,4 @@
-# MCP Marketplace - Next.js
+# MCP Marketplace
 
 A simple marketplace frontend for hosted MCP servers that work with Poke.
 
@@ -42,7 +42,7 @@ Each MCP server is deployed separately on Render:
 
 ## 🚀 Deployment
 
-### Frontend (Next.js Marketplace)
+### Frontend (MCP Marketplace)
 
 Deploy to Vercel, Netlify, or any static hosting:
 
@@ -254,7 +254,7 @@ Then deploy the frontend to Vercel, Netlify, or your preferred hosting platform.
 1. **Push your code to GitHub** (if you haven't already)
 2. **Go to [vercel.com](https://vercel.com)** and sign up/login with GitHub
 3. **Click "New Project"**
-4. **Import your repository** containing the Next.js marketplace
+4. **Import your repository** containing the mcp marketplace
 5. **Configure the project:**
    - **Framework Preset**: Next.js (auto-detected)
    - **Root Directory**: `nextjs-marketplace` (if your repo has multiple folders)
