@@ -40,6 +40,11 @@ Each MCP server is deployed separately on Render:
 - ✅ **Poke instructions** - Clear integration guide
 - ✅ **Modern UI** - Clean, professional design
 
+## References
+
+- Based on the Interaction MCP server template and MCP patterns: [MCP Server Template](https://github.com/InteractionCo/mcp-server-template/tree/main)
+- Discovered via Interaction’s HackMIT challenge: [Interaction HackMIT Challenge](https://interaction.co/HackMIT)
+
 ## 🚀 Deployment
 
 ### MCP Servers (Render.com)
