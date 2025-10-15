@@ -64,6 +64,16 @@ const mcpServers: MCPServer[] = [
     url: 'https://spotify-mcp-092h.onrender.com/',
     status: 'live',
     githubRepo: 'https://github.com/akarnik23/mcp-spotify'
+  },
+  {
+    id: 'news',
+    name: 'News',
+    description: 'Get headlines, search news, and access RSS feeds from major sources',
+    icon: '/news.png',
+    capabilities: ['get_headlines', 'search_news', 'get_category_news', 'get_rss_feed'],
+    url: 'https://news-mcp-xd6i.onrender.com/mcp',
+    status: 'live',
+    githubRepo: 'https://github.com/akarnik23/mcp-news'
   }
 ]
 

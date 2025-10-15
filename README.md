@@ -14,7 +14,7 @@ Open [http://localhost:3000](http://localhost:3000) to see the marketplace.
 
 ## 🎯 What This Does
 
-- **Displays 5 MCP servers**: Hacker News, Weather, GitHub, Reddit, Spotify
+- **Displays 6 MCP servers**: Hacker News, Weather, GitHub, Reddit, Spotify, News
 - **Shows server status**: Live, Deploying, or Offline
 - **Copy-to-clipboard**: Easy URL copying for Poke
 - **Instructions**: Step-by-step guide for Poke integration
@@ -24,11 +24,12 @@ Open [http://localhost:3000](http://localhost:3000) to see the marketplace.
 
 Each MCP server is deployed separately on Render:
 
-- **Hacker News**: `https://hackernews-mcp.onrender.com/mcp`
-- **Weather**: `https://weather-mcp.onrender.com/mcp`  
-- **GitHub**: `https://github-mcp.onrender.com/mcp`
-- **Reddit**: `https://reddit-mcp.onrender.com/mcp`
-- **Spotify**: `https://spotify-mcp-092h.onrender.com/mcp`
+- **Hacker News**: `https://hackernews-mcp.onrender.com/mcp` | [GitHub](https://github.com/akarnik23/mcp-hackernews)
+- **Weather**: `https://weather-mcp-mqrh.onrender.com/mcp` | [GitHub](https://github.com/akarnik23/mcp-weather)
+- **GitHub**: `https://github-mcp-lgfb.onrender.com/mcp` | [GitHub](https://github.com/akarnik23/mcp-github)
+- **Reddit**: `https://reddit-mcp-7ms2.onrender.com/mcp` | [GitHub](https://github.com/akarnik23/mcp-reddit)
+- **Spotify**: `https://spotify-mcp-092h.onrender.com/mcp` | [GitHub](https://github.com/akarnik23/mcp-spotify)
+- **News**: `https://news-mcp-xd6i.onrender.com/mcp` | [GitHub](https://github.com/akarnik23/mcp-news)
 
 ## 🎨 Features
 
