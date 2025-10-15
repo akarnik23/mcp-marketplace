@@ -58,9 +58,9 @@ const mcpServers: MCPServer[] = [
   {
     id: 'spotify',
     name: 'Spotify',
-    description: 'Search tracks, artists, get recommendations, and explore playlists',
+    description: 'Search tracks, artists, and get top tracks from any artist',
     icon: '/spotify.png',
-    capabilities: ['search_tracks', 'search_artists', 'get_artist_top_tracks', 'get_recommendations'],
+        capabilities: ['search_tracks', 'search_artists', 'get_artist_top_tracks'],
     url: 'https://spotify-mcp-092h.onrender.com/',
     status: 'live',
     githubRepo: 'https://github.com/akarnik23/mcp-spotify'
