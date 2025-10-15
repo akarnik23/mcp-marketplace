@@ -54,6 +54,16 @@ const mcpServers: MCPServer[] = [
     url: 'https://reddit-mcp-7ms2.onrender.com/',
     status: 'live',
     githubRepo: 'https://github.com/akarnik23/mcp-reddit'
+  },
+  {
+    id: 'spotify',
+    name: 'Spotify',
+    description: 'Search tracks, artists, get recommendations, and explore playlists',
+    icon: '/spotify.png',
+    capabilities: ['search_tracks', 'search_artists', 'get_artist_top_tracks', 'get_recommendations'],
+    url: 'https://spotify-mcp-092h.onrender.com/',
+    status: 'live',
+    githubRepo: 'https://github.com/akarnik23/mcp-spotify'
   }
 ]
 

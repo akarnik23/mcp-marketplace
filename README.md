@@ -14,7 +14,7 @@ Open [http://localhost:3000](http://localhost:3000) to see the marketplace.
 
 ## 🎯 What This Does
 
-- **Displays 4 MCP servers**: Hacker News, Weather, GitHub, Reddit
+- **Displays 5 MCP servers**: Hacker News, Weather, GitHub, Reddit, Spotify
 - **Shows server status**: Live, Deploying, or Offline
 - **Copy-to-clipboard**: Easy URL copying for Poke
 - **Instructions**: Step-by-step guide for Poke integration
@@ -28,6 +28,7 @@ Each MCP server is deployed separately on Render:
 - **Weather**: `https://weather-mcp.onrender.com/mcp`  
 - **GitHub**: `https://github-mcp.onrender.com/mcp`
 - **Reddit**: `https://reddit-mcp.onrender.com/mcp`
+- **Spotify**: `https://spotify-mcp-092h.onrender.com/mcp`
 
 ## 🎨 Features
 
@@ -153,7 +154,43 @@ Each MCP server can be deployed separately on Render.com:
 5. Copy your `client_id` and `client_secret`
 6. Add them to Render environment variables as shown above
 
-#### 5. Deploy the Frontend
+#### 5. Spotify MCP Server
+
+**Prerequisites:**
+- Spotify account
+- Spotify API credentials (free at [developer.spotify.com](https://developer.spotify.com/dashboard))
+
+**Steps:**
+1. Create a new Web Service on Render
+2. Configure the service:
+   - **Name**: `spotify-mcp`
+   - **Environment**: `Python 3`
+   - **Plan**: `Free`
+   - **Build Command**: `pip install -r requirements.txt`
+   - **Start Command**: `python src/server.py`
+
+3. **Set Environment Variables:**
+   - `PORT`: `8000`
+   - `SPOTIFY_CLIENT_ID`: Your Spotify app client ID
+   - `SPOTIFY_CLIENT_SECRET`: Your Spotify app client secret
+
+**Getting Spotify API Credentials:**
+1. Go to [Spotify Developer Dashboard](https://developer.spotify.com/dashboard)
+2. Log in with your Spotify account
+3. Click "Create App"
+4. Fill in the app details:
+   - **App name**: `Your MCP Server` (or any name you prefer)
+   - **App description**: `MCP server for Spotify integration`
+   - **Website**: `https://spotify-mcp.onrender.com` (use your deployed URL)
+   - **Redirect URI**: `https://spotify-mcp.onrender.com` (use your deployed URL)
+5. **Select "Web API"** when asked about APIs/SDKs
+6. Click "Save"
+7. Copy your `Client ID` and `Client Secret`
+8. Add them to Render environment variables as shown above
+
+**Note:** Use your deployed Render URL (not localhost) for the redirect URI since Spotify requires HTTPS for security.
+
+#### 6. Deploy the Frontend
 
 **Important:** If you added API keys (GitHub token, Weather API key, Reddit credentials), be careful about sharing your deployed frontend publicly as it will contain your MCP server URLs.
 
@@ -196,6 +233,15 @@ const mcpServers = [
     capabilities: ['get_subreddit_posts', 'search_reddit', 'get_user_posts'],
     url: 'https://your-reddit-mcp.onrender.com/mcp', // Update this
     status: 'live'
+  },
+  {
+    id: 'spotify',
+    name: 'Spotify',
+    description: 'Search tracks, artists, get recommendations, and explore playlists',
+    icon: '/spotify.png',
+    capabilities: ['search_tracks', 'search_artists', 'get_artist_top_tracks', 'get_recommendations'],
+    url: 'https://your-spotify-mcp.onrender.com/mcp', // Update this
+    status: 'live'
   }
 ];
 ```
@@ -228,6 +274,7 @@ For each MCP server that requires API keys, you need to add environment variable
    - For **GitHub MCP**: `GITHUB_TOKEN` = `your_github_token`
    - For **Weather MCP**: `WEATHER_API_KEY` = `your_openweathermap_key`
    - For **Reddit MCP**: `REDDIT_CLIENT_ID` = `your_reddit_client_id` and `REDDIT_CLIENT_SECRET` = `your_reddit_client_secret`
+   - For **Spotify MCP**: `SPOTIFY_CLIENT_ID` = `your_spotify_client_id` and `SPOTIFY_CLIENT_SECRET` = `your_spotify_client_secret`
 4. **Click "Save Changes"**
 5. **Redeploy** your service (Render will automatically redeploy when you save environment variables)
 
