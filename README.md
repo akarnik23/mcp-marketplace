@@ -10,7 +10,7 @@ npm install
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) to see the marketplace.
+Open [http://localhost:3000](http://localhost:3000) (or [http://localhost:3001](http://localhost:3001) if port 3000 is in use) to see the marketplace.
 
 ## 🎯 What This Does
 
@@ -42,6 +42,7 @@ Each MCP server is deployed separately on Render:
 
 ## 🚀 Deployment
 
+<<<<<<< Updated upstream
 ### Frontend (MCP Marketplace)
 
 Deploy to Vercel, Netlify, or any static hosting:
@@ -52,6 +53,8 @@ npm run build
 
 The built files will be in the `out` directory.
 
+=======
+>>>>>>> Stashed changes
 ### MCP Servers (Render.com)
 
 Each MCP server can be deployed separately on Render.com:
