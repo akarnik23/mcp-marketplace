@@ -82,7 +82,7 @@ Each MCP server can be deployed separately on Render.com:
 #### 2. Weather MCP Server
 
 **Prerequisites:**
-- OpenWeatherMap API key (free at [openweathermap.org](https://openweathermap.org/api)) # Otherwise will show demo data
+- None (uses National Weather Service API; no API key required)
 
 **Steps:**
 1. Create a new Web Service on Render
@@ -95,12 +95,7 @@ Each MCP server can be deployed separately on Render.com:
 
 3. **Set Environment Variables:**
    - `PORT`: `8000`
-   - `WEATHER_API_KEY`: Your OpenWeatherMap API key
-
-**Getting OpenWeatherMap API Key:**
-1. Sign up at [openweathermap.org](https://openweathermap.org/api)
-2. Go to API keys section
-3. Copy your API key and use it as `WEATHER_API_KEY` in Render
+   - No other variables needed
 
 #### 3. Hacker News MCP Server
 
@@ -206,9 +201,9 @@ const mcpServers = [
   {
     id: 'weather',
     name: 'Weather',
-    description: 'Get current weather and forecasts for any location worldwide',
+    description: 'Get current weather, forecasts, and official alerts (NWS)',
     icon: '/weather.png',
-    capabilities: ['get_current_weather', 'get_forecast'],
+    capabilities: ['get_current_weather', 'get_forecast', 'get_weather_alerts'],
     url: 'https://your-weather-mcp.onrender.com/mcp', // Update this
     status: 'live'
   },
